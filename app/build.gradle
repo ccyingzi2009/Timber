@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "naman14.timber"
@@ -24,6 +24,11 @@ android {
 
 repositories {
     jcenter()
+
+    // 内网环境
+    maven {
+        url 'http://ntes.android.com:8081/artifactory/news-libs-release'
+    }
 }
 
 dependencies {
